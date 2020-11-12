@@ -114,7 +114,7 @@ public class MathUtilsTest {
     @Test
     @EnabledOnOs({OS.MAC})
     void dontRunButOnMac(){
-        System.out.println("You will never see this string.");
+        System.out.println("You will never see this string on windows or linux.");
     }
 
     @Test
