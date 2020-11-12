@@ -3,6 +3,8 @@ package be.dog.d.steven;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
@@ -91,6 +93,15 @@ public class MathUtilsTest {
             assertEquals(15, mathUtils.subtract(10,-5));
         }
     }
+
+    @ParameterizedTest
+    @ValueSource(ints={-5,-3,3,5,8,14})
+    @DisplayName("Declaring integers")
+    void shouldDeclareInteger(int integer){
+        Integer i = integer; // POC for parameterized test, no1 should ever test if declaring an integer works
+        assertEquals(integer, i);
+    }
+
 
     // IGNORED TESTS
 
