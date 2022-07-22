@@ -6,6 +6,9 @@ import org.junit.jupiter.api.condition.OS;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
@@ -36,6 +39,7 @@ public class MathUtilsTest {
 
 
     @Tag("math")
+    @Retention(RetentionPolicy.RUNTIME)
     public @interface Math {
         // You can add more @annotations to this to group to @Math
     }
