@@ -1,17 +1,18 @@
 # JUnit5
 
 ### What in new in JUnit Jupiter
+
 - Visibility
-  - Everything does not have to be public
+    - Everything does not have to be public
 - Custom display names
-  - @DisplayName: spaces, special characters, emoji :ghost:
-  - DisplayNameGenerator
+    - @DisplayName: spaces, special characters, emoji :ghost:
+    - DisplayNameGenerator
 - Tagging
-  - @Tag
-  - Tag expression language
+    - @Tag
+    - Tag expression language
 - Meta-annotation support
-  - Create your own custom composed annotations
-  - Combine annotations from Spring and JUnit
+    - Create your own custom composed annotations
+    - Combine annotations from Spring and JUnit
 - Conditional test execution
 - Dependency injection for constructors and methods
 - Lambda expressions and method references
@@ -22,16 +23,18 @@
 - Implicit / Explicit conversions
 - Argument aggregation
 - New extension model
-  - Extension: marker interface
-  - APIs: org.junit.jupiter.api.extension
-  - @ExtendWith(...)
-  - @RegisterExtension
+    - Extension: marker interface
+    - APIs: org.junit.jupiter.api.extension
+    - @ExtendWith(...)
+    - @RegisterExtension
 - And more ...
 
 ## Architecture
+
 <img width="500" src="https://raw.githubusercontent.com/H3AR7B3A7/JUnit5/master/architecture.png" alt="architecture">
 
 ## Dependencies
+
 2 + 1 or more dependencies (depending on if you want legacy and/or 3d party engines):
 
     <dependency>
@@ -52,4 +55,3 @@
         <version>5.4.2</version>
         <scope>test</scope>
     </dependency>
-    
