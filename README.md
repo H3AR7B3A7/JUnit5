@@ -1,4 +1,4 @@
-# JUnit5
+# Testing with JUnit5
 
 ### What in new in JUnit Jupiter
 
@@ -55,3 +55,41 @@
         <version>5.4.2</version>
         <scope>test</scope>
     </dependency>
+
+## Testing
+
+### Making Existing Code Testable
+
+Common issues:
+- Mixed concerns
+- Problematic dependencies
+
+#### Mixed concerns
+
+They violate the single responsibility principle.
+This can make it hard to:
+
+- Access system output to apply assertions (for example outputting them to a file or report)
+- Provide inputs to the code under test (when ui code is mixed with business code)
+- Avoid undesired side effects (for example db access, either unavailability or slow)
+
+**Solution**:
+
+Extract and separate the code to test.
+
+#### Problematic dependencies
+
+They can make testing difficult due to:
+
+- Side effects
+- Talking to remote services that aren't always present
+- Inconsistent behavior
+
+**Solution**:
+
+Provide a test double for the dependency (through DI), without the harmful side effects or external dependencies.
+Libraries like Mockito or EasyMock make this very easy and prevent the clutter of extra classes / files.
+
+
+
+---
